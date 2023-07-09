@@ -23,6 +23,17 @@ const enableSwiper = function () {
     },
   });
 };
+
+document.addEventListener('keydown', function(event) {
+  if (event.code === 'ArrowLeft') {
+    event.preventDefault();
+    mySwiper.slidePrev();
+  } else if (event.code === 'ArrowRight') {
+      event.preventDefault();
+    mySwiper.slideNext();
+  }
+});  
+
 breakpoint.addEventListener('change', () => {
   breakpointChecker();
 });
